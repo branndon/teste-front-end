@@ -1,0 +1,18 @@
+
+.search {
+    display: flex;
+    justify-content: space-between;
+    border: solid 2px gray;
+    padding: 10px;
+    border-radius: 4px;
+
+    &__field {
+        border: 0;
+        flex: 1;
+    }
+    &__icon {
+        width: auto;
+        height: 20px;
+        margin-left: 10px;
+    }
+}
