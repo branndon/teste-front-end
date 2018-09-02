@@ -1,0 +1,36 @@
+.video {
+    display: flex;
+    flex-direction: column;
+
+    > *:not(:first-child) {
+        margin-top: 8px;
+    }
+
+    &__img {
+        height: 200px;
+        background: #cccaca;
+        border-radius: 4px;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 16px;
+    }
+    &__channel {
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    &__description {
+        font-size: 11px;
+    }
+
+    &__link {
+        background: #cccaca;
+        padding: 8px;
+        text-transform: uppercase;
+        flex-grow: 10%;
+        align-self: flex-start;
+        font-size: 14px;
+    }
+}

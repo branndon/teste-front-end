@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { InputSearchComponent } from './shared/components/input-search/input-search.component';
+import { ListBlockComponent } from './shared/components/list-block/list-block.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InputSearchComponent
+    InputSearchComponent,
+    ListBlockComponent
   ],
   imports: [
     BrowserModule
