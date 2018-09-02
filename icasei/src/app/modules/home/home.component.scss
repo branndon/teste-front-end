@@ -1,0 +1,41 @@
+:host {
+    height: 100%;
+    display: flex;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    flex-basis: 100%;
+    transition: justify-content 4s ease;
+    flex-direction: column;
+
+    &__search {
+        width: 100%;
+
+        @media only screen and (min-width: 600px) {
+            max-width: 600px;
+        }
+    }
+
+    &__list {
+        width: 100%;
+        margin-top: 32px;
+
+        @media only screen and (min-width: 600px) {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        app-list-block {
+            @media only screen and (min-width: 600px) {
+                display: inline-flex;
+                flex: 1 1 25%;
+                max-width: 400px;
+            }
+        }
+    }
+}
