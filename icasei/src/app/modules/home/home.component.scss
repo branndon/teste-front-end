@@ -26,15 +26,23 @@
 
         @media only screen and (min-width: 600px) {
             display: flex;
-            justify-content: space-between;
             flex-wrap: wrap;
+            max-width: 990px;
         }
 
         app-list-block {
             @media only screen and (min-width: 600px) {
                 display: inline-flex;
-                flex: 1 1 25%;
-                max-width: 400px;
+                flex: 0 0 320px;
+                margin-top: 20px;
+
+                &:not(:first-child){
+                    // margin-left: 10px;
+                }
+
+                &:nth-child(4n){
+                    // margin-left: 0;
+                }
             }
         }
     }

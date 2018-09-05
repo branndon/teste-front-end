@@ -1,0 +1,81 @@
+
+:host {
+    display: flex;
+    margin: 0 16px;
+
+    @media only screen and (min-width: 600px) {
+        margin: 0 20%;
+    }
+}
+
+.video {
+    display: flex;
+    flex-direction: column;
+
+    &__back {
+        margin-top: 20px;
+        text-decoration: none;
+        border: 1px solid gray;
+        padding: 16px;
+        display: inline-block;
+        color: #000;
+        border-radius: 4px;
+
+        @media only screen and (min-width: 600px) {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            margin-top: 0;
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 1rem;
+        margin: 24px 0;
+    }
+
+    &__player {
+        background: gray;
+        height: 200px;
+        width: 100%;
+        margin-bottom: 16px;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        @media only screen and (min-width: 600px) {
+            height: 400px;
+        }
+    }
+
+    &__infos {
+        display: flex;
+
+        &__channel {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        &__numbers {
+            margin-left: auto;
+
+            :first-of-type{
+                background: red;
+            }
+        }
+    }
+
+    &__description {
+        margin-top: 16px;
+        font-size: 12px;
+        line-height: 1.5;
+        text-align: justify;
+    }
+
+    &__views {
+        margin-top: 16px;
+    }
+}

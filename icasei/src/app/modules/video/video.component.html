@@ -1,0 +1,32 @@
+<div class="video" *ngFor="let video of videoObj">
+  <a [routerLink]="['/']" class="video__back">Voltar</a>
+
+  <h2 class="video__title">
+    {{ video.snippet.title }}
+  </h2>
+
+  <div class="video__player">
+      <iframe width="745" height="419" [src]="sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + video.id)" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <div class="video__infos">
+    <h3 class="video__infos__channel">
+        {{ video.snippet.channelTitle }}
+    </h3>
+    <p class="video__infos__numbers">
+      {{ video.statistics.likeCount }}
+    </p>
+    <p class="video__infos__numbers">
+      {{ video.statistics.dislikeCount }}
+    </p>
+  </div>
+
+  <p class="video__description">
+    {{ video.snippet.description }}
+  </p>
+
+  <p class="video__views">
+    {{ video.statistics.viewCount }}
+  </p>
+
+</div>

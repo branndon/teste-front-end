@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { AppComponent } from './app.component';
 import { InputSearchComponent } from './shared/components/input-search/input-search.component';
@@ -7,17 +9,21 @@ import { ListBlockComponent } from './shared/components/list-block/list-block.co
 import { HomeComponent } from './modules/home/home.component';
 
 import { routing } from './app.routes';
+import { VideoComponent } from './modules/video/video.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InputSearchComponent,
     ListBlockComponent,
-    HomeComponent
+    HomeComponent,
+    VideoComponent
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    HttpModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

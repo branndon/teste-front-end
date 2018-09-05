@@ -1,7 +1,22 @@
 <div class="video">
-  <div class="video__img"></div>
-  <h2 class="video__title">Título do vídeo 1</h2>
-  <p class="video__channel">Nome do canal</p>
-  <p class="video__description">Lorem Ipsum dolor sit Lorem Ipsum dolor sit Lorem Ipsum dolor sit Lorem Ipsum dolor sit Lorem Ipsum dolor sit</p>
-  <a class="video__link">Detalhes do vídeo</a>
+  <div
+    [ngStyle]="{'background-image': 'url(' + videoImg + ')'}"
+    class="video__img"
+  >
+  </div>
+
+  <h2 class="video__title">
+    {{ videoTitle }}
+  </h2>
+
+  <p class="video__channel">
+    {{ channelTitle }}
+  </p>
+
+  <p class="video__description">
+    {{ videoDesc }}
+  </p>
+
+  <a class="video__link" [routerLink]="['/video/' + videoId]">Detalhes do vídeo</a>
+
 </div>
