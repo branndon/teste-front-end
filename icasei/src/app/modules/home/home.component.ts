@@ -11,12 +11,11 @@ export class HomeComponent implements OnInit {
 
   videos;
   myCount = '';
+  showError = false;
 
-  constructor( private listaPersonagens: ListaService ) { }
+  constructor( private listaPersonagens: ListaService ) {}
 
-  ngOnInit() {
-    this.searchVideo( 'marron 5' );
-  }
+  ngOnInit() {}
 
   countChange( event ) {
     this.videos = [];
@@ -25,10 +24,9 @@ export class HomeComponent implements OnInit {
 
   searchVideo( term: string ) {
     this.listaPersonagens.searchVideo(term).subscribe( data => {
-      console.log( data.json() );
       this.videos = data.json().items;
-     }
-   );
+      this.videos.length ? this.showError = false : this.showError = true;
+    });
   }
 
 }

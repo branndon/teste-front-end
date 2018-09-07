@@ -11,15 +11,21 @@
 .video {
     display: flex;
     flex-direction: column;
+    flex-basis: 100%;
 
     &__back {
         margin-top: 20px;
         text-decoration: none;
         border: 1px solid gray;
-        padding: 16px;
+        padding: 8px;
         display: inline-block;
         color: #000;
         border-radius: 4px;
+
+        svg {
+            width: 16px;
+            height: 16px;
+        }
 
         @media only screen and (min-width: 600px) {
             position: absolute;
@@ -60,10 +66,19 @@
         }
 
         &__numbers {
-            margin-left: auto;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
 
-            :first-of-type{
-                background: red;
+            &:first-of-type {
+                margin-left: auto;
+                margin-right: 24px;
+            }
+
+            :first-of-type {
+                width: 16px;
+                height: 16px;
+                margin-right: 5px;
             }
         }
     }
@@ -77,5 +92,14 @@
 
     &__views {
         margin-top: 16px;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+
+        svg {
+            width: 16px;
+            height: 16px;
+            margin-right: 5px;
+        }
     }
 }

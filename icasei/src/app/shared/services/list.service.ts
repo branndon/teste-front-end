@@ -14,7 +14,7 @@ export class ListaService {
     searchVideo( term: string ) {
         this.url =
         // tslint:disable-next-line:max-line-length
-        'https://www.googleapis.com/youtube/v3/search?part=id,snippet&q=' + term + '&key=' + this.apiKey + '&maxResults=20';
+        'https://www.googleapis.com/youtube/v3/search?part=id,snippet&q=' + term + '&key=' + this.apiKey + '&maxResults=50&order=title';
 
         return this.http.get(
             this.url

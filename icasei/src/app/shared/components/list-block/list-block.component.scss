@@ -1,6 +1,15 @@
+
+:host {
+    transition: all 0.6s ease;
+
+    &:hover {
+        transform: translateY(-10px);
+    }
+}
 .video {
     display: flex;
     flex-direction: column;
+    flex-basis: 100%;
 
     > *:not(:first-child) {
         margin-top: 8px;
@@ -13,6 +22,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        cursor: pointer;
     }
 
     &__title {
@@ -35,5 +45,7 @@
         flex-grow: 10%;
         align-self: flex-start;
         font-size: 14px;
+        color: #fff;
+        text-decoration: none;
     }
 }

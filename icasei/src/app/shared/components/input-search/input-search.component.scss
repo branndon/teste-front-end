@@ -5,6 +5,8 @@
     border: solid 2px gray;
     padding: 10px;
     border-radius: 4px;
+    transform: translateY(50vh);
+    transition: transform 0.8s ease;
 
     &__field {
         border: 0;

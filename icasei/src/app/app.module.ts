@@ -10,6 +10,7 @@ import { HomeComponent } from './modules/home/home.component';
 
 import { routing } from './app.routes';
 import { VideoComponent } from './modules/video/video.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { VideoComponent } from './modules/video/video.component';
     BrowserModule,
     routing,
     HttpModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
