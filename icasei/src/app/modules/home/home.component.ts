@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   videos;
   myCount = '';
   showError = false;
+  sliderTranslate = 0;
 
   constructor( private listaPersonagens: ListaService ) {}
 
@@ -27,6 +28,14 @@ export class HomeComponent implements OnInit {
       this.videos = data.json().items;
       this.videos.length ? this.showError = false : this.showError = true;
     });
+  }
+
+  sliderPrev() {
+    this.sliderTranslate += 100;
+  }
+
+  sliderNext() {
+    this.sliderTranslate -= 100;
   }
 
 }
