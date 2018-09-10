@@ -14,7 +14,7 @@ Caso queira ve-lo em produção, veja uma [demo aqui](https://branndonarruda.bit
 - Git (Git Flow)
 
 # Instruções para rodar o projeto
-- git clone [projeto](https://bitbucket.org/branndonarruda/icasei/src/develop/ "clique aqui")
+- git clone [projeto](https://github.com/branndon/teste-front-end/tree/develop/icasei "clique aqui")
 - npm install
 - ng serve
 
