@@ -1,6 +1,11 @@
 
 :host {
     transition: all 0.6s ease;
+    display: flex;
+
+    &:not(:first-of-type) {
+        margin-top: 16px;
+    }
 
     &:hover {
         transform: translateY(-10px);

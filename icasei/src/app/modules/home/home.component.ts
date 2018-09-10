@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   videos;
   myCount = '';
   showError = false;
+  pageAtual: any;
 
   constructor( private listaPersonagens: ListaService ) {}
 

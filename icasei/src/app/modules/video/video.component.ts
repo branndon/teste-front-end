@@ -22,7 +22,7 @@ export class VideoComponent implements OnInit {
   ngOnInit() {
     this.videoService.getVideo( this.activeRoute.snapshot.params.id ).subscribe( data => {
       this.videoObj = data.json().items;
-    }
+    });
   }
 
   backClicked() {
